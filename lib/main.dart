@@ -52,19 +52,19 @@ class _MainScreenState extends State<MainScreen> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
+            label: 'Головна',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.lightbulb),
-            label: 'Second',
+            label: 'Поради',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.book),
-            label: 'Tips',
+            label: 'Відео',
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.red,
+        selectedItemColor: const Color.fromARGB(255, 54, 52, 52),
         unselectedItemColor: Colors.grey,
         onTap: _onItemTapped,
       ),
@@ -119,7 +119,7 @@ class HomeScreen extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('Watch · Top'),
+                              Text('Плануй свою риболовлю'),
                               ElevatedButton(
                                 onPressed: () {
                                   Navigator.push(
@@ -132,9 +132,10 @@ class HomeScreen extends StatelessWidget {
                                   );
                                 },
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.red,
-                                ),
-                                child: Text('Watch'),
+                                  backgroundColor: Color.fromARGB(255, 97, 92, 255),
+                                  foregroundColor: const Color.fromARGB(255, 255, 255, 255)
+                                 ),
+                                child: Text('Дивитись'),
                               ),
                             ],
                           ),
@@ -155,7 +156,7 @@ class HomeScreen extends StatelessWidget {
                   buildCategoryCard(
                     context,
                     'Поради',
-                    'assets/equipment.jpg',
+                    'assets/video3.jpg',
                     TipsPage(), 
                   ),
                   buildCategoryCard(

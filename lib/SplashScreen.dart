@@ -11,6 +11,7 @@ class FishMasterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: SplashScreen(), 
       theme: ThemeData(
         primarySwatch: Colors.red,
@@ -29,7 +30,7 @@ class SplashScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "FishMaster App",
+              "FishMaster",
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
@@ -37,7 +38,7 @@ class SplashScreen extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Text(
-              'Discover fishing tips and forecasts for anglers',
+              'Посібник справжнього рибалки',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 16,
@@ -51,21 +52,26 @@ class SplashScreen extends StatelessWidget {
             ),
             SizedBox(height: 24),
             ElevatedButton(
-              onPressed: () {
-                 
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => MainScreen()),
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                padding: EdgeInsets.symmetric(horizontal: 40, vertical: 16),
-              ),
-              child: Text('Explore'),
-            ),
+  onPressed: () {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => MainScreen()),
+    );
+  },
+  style: ElevatedButton.styleFrom(
+    foregroundColor: Colors.white, backgroundColor: Color.fromARGB(255, 97, 92, 255),// Встановлюємо основний колір червоним, відповідно до теми
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(8), // Трохи менш закруглені кути, як на інших сторінках
+    ),
+    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12), // Оптимальні відступи
+    textStyle: TextStyle(
+      fontSize: 18,  // Розмір шрифту, узгоджений з іншими сторінками
+    ),
+  ),
+  child: Text('Дослідити'),
+  
+  
+)
           ],
         ),
       ),

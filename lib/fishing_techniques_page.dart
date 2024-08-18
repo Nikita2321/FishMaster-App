@@ -49,7 +49,7 @@ class FishingTechniquesPage extends StatelessWidget {
               ),
               SizedBox(height: 16),
               Text(
-                'Related Images',
+                'Схожі статті',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 8),

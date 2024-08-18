@@ -9,6 +9,7 @@ class FishMasterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
       theme: ThemeData(
         primarySwatch: Colors.red,
@@ -136,9 +137,9 @@ class HomePage extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: onTap,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.red,
+                    foregroundColor: Colors.white, backgroundColor: Color.fromARGB(255, 97, 92, 255),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                   ),
                   child: Text('Read More'),
