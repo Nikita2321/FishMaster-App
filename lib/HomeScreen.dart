@@ -111,7 +111,7 @@ class HomeScreen extends StatelessWidget {
                     context,
                     'Gear Reviews',
                     'assets/gear_reviews.png',
-                    '/tips', // Змінити на інший маршрут, якщо потрібно
+                    '/tips',  
                   ),
                 ],
               ),

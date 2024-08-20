@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/VideoPage.dart'; // Замініть шлях на правильний для вашого проекту
+import 'package:flutter_application_1/VideoPage.dart';  
 
 void main() {
   runApp(FishMasterApp());
@@ -54,7 +54,7 @@ class _MainScreenState extends State<MainScreen> {
           IconButton(
             icon: Icon(Icons.search),
             onPressed: () {
-              // Дія при натисканні на іконку пошуку
+               
             },
           ),
         ],
@@ -65,7 +65,7 @@ class _MainScreenState extends State<MainScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Головна',
-            backgroundColor: Colors.red, // Делаем кнопку "Home" красной
+            backgroundColor: Colors.red,  
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.lightbulb),
@@ -77,7 +77,7 @@ class _MainScreenState extends State<MainScreen> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.red, // Также выделяем текст "Home" красным
+        selectedItemColor: Colors.red,  
         unselectedItemColor: Colors.grey,
         onTap: _onItemTapped,
       ),
@@ -94,14 +94,14 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             AspectRatio(
-              aspectRatio: 4 / 3, // Задать такой же размер, как у нижних квадратов
+              aspectRatio: 4 / 3,  
               child: Card(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
                 elevation: 0, // Убрать тень
                 child: Padding(
-                  padding: const EdgeInsets.only(right: 8.0), // Сдвигаем изображение левее, убирая отступ слева
+                  padding: const EdgeInsets.only(right: 8.0),  
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -109,8 +109,7 @@ class HomeScreen extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(16),
                           child: Image.asset(
-                            'assets/pike.jpg', // Ваше изображение
-                            fit: BoxFit.cover,
+                            'assets/pike.jpg',  
                             width: double.infinity,
                           ),
                         ),
@@ -121,7 +120,7 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 16.0), // Увеличиваем отступ слева для текста
+                              padding: const EdgeInsets.only(left: 16.0),  
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -177,13 +176,13 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 8), // Уменьшить отступ
+            SizedBox(height: 8), 
             Expanded(
               child: GridView.count(
                 crossAxisCount: 2,
                 crossAxisSpacing: 8,
                 mainAxisSpacing: 8,
-                childAspectRatio: 4 / 5, // Больше места для текста внизу
+                childAspectRatio: 4 / 5, 
                 children: [
                   buildCategoryCard(
                     context,
@@ -244,9 +243,9 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 12), // Увеличить отступ между изображением и текстом
+            SizedBox(height: 12),  
              Padding(
-            padding: const EdgeInsets.only(bottom: 16.0), // Увеличиваем отступ снизу текста
+            padding: const EdgeInsets.only(bottom: 16.0),  
             child: Text(
               title,
               style: TextStyle(

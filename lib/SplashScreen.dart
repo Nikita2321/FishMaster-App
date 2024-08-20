@@ -61,11 +61,11 @@ class SplashScreen extends StatelessWidget {
   style: ElevatedButton.styleFrom(
     foregroundColor: Colors.white, backgroundColor: Color.fromARGB(255, 97, 92, 255),// Встановлюємо основний колір червоним, відповідно до теми
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(8), // Трохи менш закруглені кути, як на інших сторінках
+      borderRadius: BorderRadius.circular(8),  
     ),
-    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12), // Оптимальні відступи
+    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),  
     textStyle: TextStyle(
-      fontSize: 18,  // Розмір шрифту, узгоджений з іншими сторінками
+      fontSize: 18,  
     ),
   ),
   child: Text('Дослідити'),

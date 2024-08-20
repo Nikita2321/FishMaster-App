@@ -27,9 +27,9 @@ class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
   static List<Widget> _pages = <Widget>[
-    TipsPage(), // Первая страница - Главная
-    FishingTechniquesPage(), // Вторая страница - Поради
-    Container(color: Colors.blue), // Третья страница - Видео (пример)
+    TipsPage(), 
+    FishingTechniquesPage(),  
+    Container(color: Colors.blue),  
   ];
 
   void _onItemTapped(int index) {
