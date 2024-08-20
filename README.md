@@ -51,5 +51,7 @@ bash flutter run
 <img width="340" alt="Знімок екрана 2024-08-17 о 21 06 21" src="https://github.com/user-attachments/assets/2d1c1a5d-d095-413b-8efb-42cf363ac28b">
 <img width="325" alt="Знімок екрана 2024-08-17 о 20 59 19" src="https://github.com/user-attachments/assets/811f1690-4a4d-43f5-82b4-03a85278f399">
 <img width="341" alt="Знімок екрана 2024-08-17 о 20 45 17" src="https://github.com/user-attachments/assets/126dbdeb-66ef-4857-993b-a40c9dbd0080">
-<img width="330" alt="Знімок екрана 2024-08-19 о 10 12 26" src="https://github.com/user-attachments/assets/544a5333-d1da-4766-8b71-4f758fe750e1">
+ <img width="268" alt="image" src="https://github.com/user-attachments/assets/98ba9532-ea51-4097-80c6-0810137852a5">
+
+
 
