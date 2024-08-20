@@ -9,6 +9,7 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: ForecastVideosPage(),
       theme: ThemeData(
         primarySwatch: Colors.red,

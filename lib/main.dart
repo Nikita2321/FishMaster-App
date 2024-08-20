@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/VideoPage.dart';
- 
- 
+import 'package:flutter_application_1/VideoPage.dart'; // Замініть шлях на правильний для вашого проекту
 
 void main() {
   runApp(FishMasterApp());
@@ -30,8 +28,7 @@ class _MainScreenState extends State<MainScreen> {
 
   static List<Widget> _pages = <Widget>[
     HomeScreen(),
-    SecondPage(),
-    FishMasterApp(),
+    TipsPage(),
     VideoPlayerScreen(videoUrl: 'https://www.youtube.com/watch?v=7d2L8loFtXM',),
   ];
 
@@ -45,7 +42,22 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FishMaster'),
+        title: Text(
+          'Fish Master',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 24,
+          ),
+        ),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              // Дія при натисканні на іконку пошуку
+            },
+          ),
+        ],
       ),
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -53,18 +65,19 @@ class _MainScreenState extends State<MainScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Головна',
+            backgroundColor: Colors.red, // Делаем кнопку "Home" красной
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.lightbulb),
             label: 'Поради',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.book),
+            icon: Icon(Icons.video_library),
             label: 'Відео',
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: const Color.fromARGB(255, 54, 52, 52),
+        selectedItemColor: Colors.red, // Также выделяем текст "Home" красным
         unselectedItemColor: Colors.grey,
         onTap: _onItemTapped,
       ),
@@ -77,99 +90,124 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            Container(
-              height: 200,
+            AspectRatio(
+              aspectRatio: 4 / 3, // Задать такой же размер, как у нижних квадратов
               child: Card(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
-                elevation: 4,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(16),
-                          topRight: Radius.circular(16),
-                        ),
-                        child: Image.asset(
-                          'assets/pike.jpg',
-                          width: double.infinity,
-                          fit: BoxFit.cover,
+                elevation: 0, // Убрать тень
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 8.0), // Сдвигаем изображение левее, убирая отступ слева
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(16),
+                          child: Image.asset(
+                            'assets/pike.jpg', // Ваше изображение
+                            fit: BoxFit.cover,
+                            width: double.infinity,
+                          ),
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      SizedBox(height: 8),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            'Прогноз клювання',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 16.0), // Увеличиваем отступ слева для текста
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Прогноз клювання',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                       height: 1.2,
+                                    ),
+                                  ),
+                                  SizedBox(height: 9),
+                                  Text(
+                                    'Обери вдалий час для рибалки.\n',
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      color: const Color.fromARGB(255, 0, 0, 0),
+                                        height: 1.2,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                          SizedBox(height: 4),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text('Плануй свою риболовлю'),
-                              ElevatedButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => VideoPlayerScreen(
-                                        videoUrl: 'https://www.youtube.com/watch?v=7d2L8loFtXM',
-                                      ),
-                                    ),
-                                  );
-                                },
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Color.fromARGB(255, 97, 92, 255),
-                                  foregroundColor: const Color.fromARGB(255, 255, 255, 255)
-                                 ),
-                                child: Text('Дивитись'),
+                             SizedBox(width: 1), 
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => VideoPlayerScreen(
+                                    videoUrl: 'https://www.youtube.com/watch?v=7d2L8loFtXM',
+                                  ),
+                                ),
+                              );
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 97, 92, 255),
+                              foregroundColor: Colors.white,
+                          
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8),
                               ),
-                            ],
+                            ),
+                            child: Text('Запланувати'),
+                            
+                          
                           ),
                         ],
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
-            SizedBox(height: 16),
+            SizedBox(height: 8), // Уменьшить отступ
             Expanded(
               child: GridView.count(
                 crossAxisCount: 2,
-                crossAxisSpacing: 16,
-                mainAxisSpacing: 16,
+                crossAxisSpacing: 8,
+                mainAxisSpacing: 8,
+                childAspectRatio: 4 / 5, // Больше места для текста внизу
                 children: [
                   buildCategoryCard(
                     context,
                     'Поради',
-                    'assets/video3.jpg',
-                    TipsPage(), 
+                    'assets/video1.jpg',
+                    TipsPage(),
                   ),
                   buildCategoryCard(
                     context,
                     'Техніка',
-                    'assets/technics.jpg',
-                    SecondPage(), 
+                    'assets/fish3.jpg',
+                    SecondPage(),
                   ),
                   buildCategoryCard(
                     context,
                     'Відео',
-                    'assets/perch.jpg',
-                    GearReviewsPage(), 
+                    'assets/fish2.jpg',
+                    GearReviewsPage(),
+                  ),
+                  buildCategoryCard(
+                    context,
+                    'Прогноз',
+                    'assets/fish1.jpg',
+                    ForecastPage(),
                   ),
                 ],
               ),
@@ -192,38 +230,33 @@ class HomeScreen extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
         ),
-        elevation: 4,
+        elevation: 0, // Убрать тень
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              imagePath,
-              height: 80,
+            Expanded(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: Image.asset(
+                  imagePath,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
-            SizedBox(height: 8),
-            Text(
+            SizedBox(height: 12), // Увеличить отступ между изображением и текстом
+             Padding(
+            padding: const EdgeInsets.only(bottom: 16.0), // Увеличиваем отступ снизу текста
+            child: Text(
               title,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 16,
+                fontSize: 14,
+              ),
               ),
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class SecondPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Second Page'),
-      ),
-      body: Center(
-        child: Text('This is the second page'),
       ),
     );
   }
@@ -234,10 +267,24 @@ class TipsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Fishing Tips'),
+        title: Text('Поради'),
       ),
       body: Center(
-        child: Text('Here are some tips...'),
+        child: Text('Тут буде інформація про риболовні поради'),
+      ),
+    );
+  }
+}
+
+class SecondPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Техніка'),
+      ),
+      body: Center(
+        child: Text('Тут буде інформація про техніку риболовлі'),
       ),
     );
   }
@@ -248,10 +295,24 @@ class GearReviewsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Gear Reviews'),
+        title: Text('Огляд спорядження'),
       ),
       body: Center(
-        child: Text('Gear Reviews Page'),
+        child: Text('Тут буде інформація про огляди спорядження'),
+      ),
+    );
+  }
+}
+
+class ForecastPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Прогноз'),
+      ),
+      body: Center(
+        child: Text('Тут буде інформація про прогнози риболовлі'),
       ),
     );
   }
