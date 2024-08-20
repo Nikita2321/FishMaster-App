@@ -5,7 +5,8 @@
 ## Опис проекту
 
 **FishMaster App** - це мобільний додаток для рибалок, який надає корисні поради, прогнози на риболовлю, техніки риболовлі, а також відео-матеріали. Додаток дозволяє користувачам переглядати статті з порадами та техніками риболовлі, переглядати відео і ділитися власним досвідом.
-<img width="324" alt="Знімок екрана 2024-08-18 о 10 04 47" src="https://github.com/user-attachments/assets/4d30e2d7-1a1a-473c-9f60-19c424399abd">
+![5341507679526443792](https://github.com/user-attachments/assets/d3ed1fd1-44c1-411f-8370-44154409b61a)
+
 <img width="340" alt="Знімок екрана 2024-08-17 о 21 06 21" src="https://github.com/user-attachments/assets/a87ada7d-4468-4397-93f2-6e94b130cc2f">
 <img width="325" alt="Знімок екрана 2024-08-17 о 20 59 19" src="https://github.com/user-attachments/assets/10bb325d-268b-4ae1-bd33-29305576ee0b">
 <img width="341" alt="Знімок екрана 2024-08-17 о 20 45 17" src="https://github.com/user-attachments/assets/7a1461bc-fff7-4a00-bffc-18393b562010">
