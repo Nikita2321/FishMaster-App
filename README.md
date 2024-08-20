@@ -5,14 +5,11 @@
 ## Опис проекту
 
 **FishMaster App** - це мобільний додаток для рибалок, який надає корисні поради, прогнози на риболовлю, техніки риболовлі, а також відео-матеріали. Додаток дозволяє користувачам переглядати статті з порадами та техніками риболовлі, переглядати відео і ділитися власним досвідом.
-![5341507679526443792](https://github.com/user-attachments/assets/d3ed1fd1-44c1-411f-8370-44154409b61a)
-
-
+ 
 
 ## Можливості
 
-- **Поради по риболовлі**: Перегляд та читання статей з різноманітними порадами та техніками.![5341507679526443784](https://github.com/user-attachments/assets/9e1f38a1-4f03-4e0e-854d-0b7452fe547f)
-
+- **Поради по риболовлі**: Перегляд та читання статей з різноманітними порадами та техніками. 
 - **Прогнози на риболовлю**: Можливість перегляду актуальних прогнозів для рибалок.
 - **Відео**: Перегляд відео-матеріалів з техніками риболовлі.
 - **Навігація**: Інтуїтивна навігація по додатку через нижню панель.
@@ -39,11 +36,7 @@
 
 2. Перейдіть у директорію проекту:
 bash
-cd fishmaster-app<img width="324" alt="Знімок екрана 2024-08-18 о 10 04 47" src="https://github.com/user-attachments/assets/2d97e48c-714c-4f60-abf9-8386f8664b3b">
-<img width="340" alt="Знімок екрана 2024-08-17 о 21 06 21" src="https://github.com/user-attachments/assets/2d1c1a5d-d095-413b-8efb-42cf363ac28b">
-<img width="325" alt="Знімок екрана 2024-08-17 о 20 59 19" src="https://github.com/user-attachments/assets/811f1690-4a4d-43f5-82b4-03a85278f399">
-<img width="341" alt="Знімок екрана 2024-08-17 о 20 45 17" src="https://github.com/user-attachments/assets/126dbdeb-66ef-4857-993b-a40c9dbd0080">
-![Uploading 5341507679526443784.jpg…]()
+cd fishmaster-app
 
 
 
@@ -53,3 +46,9 @@ bash flutter pub get
 
 4.Запустіть додаток на підключеному пристрої або емуляторі:
 bash flutter run
+
+<img width="324" alt="Знімок екрана 2024-08-18 о 10 04 47" src="https://github.com/user-attachments/assets/2d97e48c-714c-4f60-abf9-8386f8664b3b">
+<img width="340" alt="Знімок екрана 2024-08-17 о 21 06 21" src="https://github.com/user-attachments/assets/2d1c1a5d-d095-413b-8efb-42cf363ac28b">
+<img width="325" alt="Знімок екрана 2024-08-17 о 20 59 19" src="https://github.com/user-attachments/assets/811f1690-4a4d-43f5-82b4-03a85278f399">
+<img width="341" alt="Знімок екрана 2024-08-17 о 20 45 17" src="https://github.com/user-attachments/assets/126dbdeb-66ef-4857-993b-a40c9dbd0080">
+![Uploading 5341507679526443784.jpg…]()
