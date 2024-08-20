@@ -1,14 +1,15 @@
 # Fisherman_app
-<img width="330" alt="Знімок екрана 2024-08-19 о 10 12 26" src="https://github.com/user-attachments/assets/ea19f555-cd72-4fb7-9e9f-4a7e787b00e5">
-<img width="324" alt="Знімок екрана 2024-08-18 о 10 04 47" src="https://github.com/user-attachments/assets/c1f6aa59-714c-427f-b5fa-d34abe3ee032">
-<img width="340" alt="Знімок екрана 2024-08-17 о 21 06 21" src="https://github.com/user-attachments/assets/c85d32cf-79e0-41ad-aafa-b2b773527d3b">
-<img width="325" alt="Знімок екрана 2024-08-17 о 20 59 19" src="https://github.com/user-attachments/assets/e2f3f815-04f9-45b1-bfc2-7efb09c98db1">
-<img width="341" alt="Знімок екрана 2024-08-17 о 20 45 17" src="https://github.com/user-attachments/assets/59e85096-1b99-4fc8-b64e-92ea2098dbc9">
+ 
 
 
 ## Опис проекту
 
 **FishMaster App** - це мобільний додаток для рибалок, який надає корисні поради, прогнози на риболовлю, техніки риболовлі, а також відео-матеріали. Додаток дозволяє користувачам переглядати статті з порадами та техніками риболовлі, переглядати відео і ділитися власним досвідом.
+<img width="324" alt="Знімок екрана 2024-08-18 о 10 04 47" src="https://github.com/user-attachments/assets/4d30e2d7-1a1a-473c-9f60-19c424399abd">
+<img width="340" alt="Знімок екрана 2024-08-17 о 21 06 21" src="https://github.com/user-attachments/assets/a87ada7d-4468-4397-93f2-6e94b130cc2f">
+<img width="325" alt="Знімок екрана 2024-08-17 о 20 59 19" src="https://github.com/user-attachments/assets/10bb325d-268b-4ae1-bd33-29305576ee0b">
+<img width="341" alt="Знімок екрана 2024-08-17 о 20 45 17" src="https://github.com/user-attachments/assets/7a1461bc-fff7-4a00-bffc-18393b562010">
+![5341507679526443784](https://github.com/user-attachments/assets/0d74b3f2-0e37-4385-aa37-4e66adbd8d79)
 
 ## Можливості
 
